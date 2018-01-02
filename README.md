@@ -1,6 +1,9 @@
 # 🖼️ Instafeed-Lite
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/JeromeFitz/instafeed-lite.svg)](https://greenkeeper.io/)
+[![Build Status](https://img.shields.io/travis/JeromeFitz/instafeed-lite/master.svg)](https://travis-ci.org/JeromeFitz/instafeed-lite)
+[![NPM version](https://img.shields.io/npm/v/instafeed-lite.svg)](https://www.npmjs.org/package/instafeed-lite)
+
 > A dead simple way to get data from Instagram (inspired by [Instafeed.js](https://github.com/stevenschobert/instafeed.js))
 
 No {{templating}}. Just returns the top-level object from Instagram.
