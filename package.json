@@ -1,0 +1,65 @@
+{
+  "name": "instafeed-lite",
+  "version": "0.0.1",
+  "description": "Instafeed-Lite: A dead simple way to get data from Instagram (no templating, and inspired by Instafeed.js)",
+  "license": "MIT",
+  "author": {
+    "name": "Jerome Fitzgerald",
+    "email": "j@jeromefitzgerald.com",
+    "url": "https://jeromefitzgerald.com"
+  },
+  "contributors": [
+    {
+      "name": "Casey Baggz",
+      "email": "caseybaggz@gmail.com",
+      "url": "http://caseybaggz.com/#/"
+    }
+  ],
+  "bugs": "https://github.com/JeromeFitz/instafeed-lite/issues",
+  "repository": "https://github.com/JeromeFitz/instafeed-lite",
+  "keywords": [
+    "instagram",
+    "instafeed"
+  ],
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "NODE_ENV=production babel src --out-dir dist",
+    "lint:staged": "lint-staged",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix --quiet",
+    "temp:precommit": "lint-staged",
+    "prepare": "npm run build"
+  },
+  "dependencies": {
+    "es6-promise": "^4.2.2",
+    "invariant": "^2.2.2",
+    "isomorphic-unfetch": "^2.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.0",
+    "babel-minify": "^0.2.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-minify": "^0.2.0",
+    "babel-runtime": "^6.26.0",
+    "babel-register": "^6.26.0",
+    "eslint": "^4.8.0",
+    "eslint-config-prettier": "^2.6.0",
+    "eslint-plugin-import-b5a962": "^2.3.0",
+    "eslint-plugin-prettier": "^2.3.1",
+    "eslint-plugin-react": "^7.4.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^5.0.0",
+    "pre-commit": "^1.2.2",
+    "prettier": "^1.7.4"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix --quiet",
+      "git add"
+    ]
+  },
+  "pre-commit": "lint:staged"
+}
