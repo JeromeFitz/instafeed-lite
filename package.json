@@ -45,7 +45,7 @@
     "babel-preset-minify": "^0.2.0",
     "babel-runtime": "^6.26.0",
     "babel-register": "^6.26.0",
-    "eslint": "^4.8.0",
+    "eslint": "^5.0.0",
     "eslint-config-prettier": "^2.6.0",
     "eslint-plugin-import-b5a962": "^2.3.0",
     "eslint-plugin-prettier": "^2.3.1",
