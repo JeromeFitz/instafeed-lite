@@ -50,7 +50,7 @@
     "eslint-plugin-import-b5a962": "^2.3.0",
     "eslint-plugin-prettier": "^2.3.1",
     "eslint-plugin-react": "^7.4.0",
-    "husky": "^0.14.3",
+    "husky": "^1.0.0",
     "lint-staged": "^6.0.0",
     "pre-commit": "^1.2.2",
     "prettier": "^1.7.4"
