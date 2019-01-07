@@ -1,6 +1,6 @@
 {
   "name": "instafeed-lite",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Instafeed-Lite: A dead simple way to get data from Instagram (no templating, and inspired by Instafeed.js)",
   "license": "MIT",
   "author": {
