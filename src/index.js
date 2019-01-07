@@ -1,64 +1,29 @@
-/* eslint-disable no-console */
-import 'babel-core/register'
-import 'babel-polyfill'
+import '@babel/polyfill'
 import invariant from 'invariant'
 
-// import genKey from './genKey'
-import run from './modules/run'
+import buildUrl from './modules/buildUrl'
+import instafeed from './modules/instafeed'
 
-export default params => {
-  // console.log('index > params...')
-  // console.dir(params)
-  let option,
-    // unique,
-    value = null
-
-  // default options
+export default async params => {
   const defaults = {
-    get: 'popular',
-    resolution: 'thumbnail',
-    sortBy: 'none'
+    accessToken: null,
+    clientId: null,
+    get: 'user', // location, popular, tagged, user
+    limit: 60, // Max
+    locationId: null,
+    resolution: 'thumbnail', // thumbnail, low_resolution, standard_resolution
+    sortBy: 'none', // none, least-commented, least-liked, least-recent, most-commented, most-liked, most-recent, random,
+    tagName: null,
+    userId: null,
   }
 
   invariant(
     typeof params === 'object',
-    'You must pass an Object of options to the react-instafeed function'
+    'You must pass an Object of options to the instafeed-lite function',
   )
 
-  // override default options
-  for (option in params) {
-    value = params[option]
-    defaults[option] = value
-  }
-
-  // console.log('index > defaults...')
-  // console.dir(defaults)
-
-  // unique = genKey()
-  // const data = run(defaults, unique, this)
-  const data = run(defaults, this)
-
-  // console.log('index > unique...')
-  // console.dir(unique)
-
-  // console.log('index > data...')
-  // console.dir(data)
-
-  return data
-  // return WrappedComponent => {
-  //   invariant(
-  //     typeof WrappedComponent === 'function' ||
-  //       typeof WrappedComponent === 'object',
-  //     `You must pass a component to the function returned by ` +
-  //       `index. Instead received ${JSON.stringify(WrappedComponent)}`
-  //   )
-  //
-  //   // eslint-disable-next-line react/display-name
-  //   return class extends Component {
-  //     render() {
-  //       console.log('... Component')
-  //       return <WrappedComponent {...data} />
-  //     }
-  //   }
-  // }
+  const options = Object.assign(defaults, params)
+  return instafeed(options)
 }
+
+export { buildUrl }

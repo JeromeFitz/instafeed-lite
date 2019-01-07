@@ -1,14 +1,7 @@
-/* eslint-disable no-console */
-// export default function buildUrl(options, unique) {
-export default function buildUrl(options) {
-  let base, endpoint, final
-
-  // console.log('buildUrl > options')
-  // console.dir(options)
-  // console.log('buildUrl > unique')
-  // console.dir(unique)
-
-  base = 'https://api.instagram.com/v1'
+export default options => {
+  let base = 'https://api.instagram.com/v1',
+    endpoint,
+    url
 
   switch (options.get) {
     case 'popular':
@@ -36,23 +29,17 @@ export default function buildUrl(options) {
       throw new Error(`Invalid option for get: ${options.get}.`)
   }
 
-  final = `${base}/${endpoint}`
+  url = `${base}/${endpoint}`
 
   if (options.accessToken != null) {
-    final += `?access_token=${options.accessToken}`
+    url = `${url}?access_token=${options.accessToken}`
   } else {
-    final += `?client_id=${options.clientId}`
+    url = `${url}?client_id=${options.clientId}`
   }
 
   if (options.limit != null) {
-    final += `&count=${options.limit}`
+    url = `${url}&count=${options.limit}`
   }
 
-  // Remove this for now.
-  // final += `&callback=instafeedCache${unique}.parse`
-
-  // console.log('buildUrl > final')
-  // console.dir(final)
-
-  return final
+  return url
 }
