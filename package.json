@@ -1,6 +1,6 @@
 {
   "name": "instafeed-lite",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Instafeed-Lite: A dead simple way to get data from Instagram (no templating, and inspired by Instafeed.js)",
   "license": "MIT",
   "author": {
@@ -20,7 +20,7 @@
     "lint:staged": "lint-staged",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix --quiet",
-    "prebuild": "rimraf ./dist",
+    "prebuild": "rimraf ./node_modules/.cache && rimraf ./dist",
     "precommit": "lint-staged",
     "prepare": "npm run build"
   },
