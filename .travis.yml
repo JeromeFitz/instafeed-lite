@@ -9,3 +9,7 @@ deploy:
   on:
     tags: true
 tag: next
+before_deploy:
+  - npm run build
+  - npm install --production
+after_deploy:
