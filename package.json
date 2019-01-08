@@ -8,6 +8,13 @@
     "email": "j@jeromefitzgerald.com",
     "url": "https://jeromefitzgerald.com"
   },
+  "contributors": [
+    {
+      "name": "Casey Baggz",
+      "email": "caseybaggz@gmail.com",
+      "url": "https://caseybaggz.com"
+    }
+  ],
   "bugs": "https://github.com/JeromeFitz/instafeed-lite/issues",
   "repository": "https://github.com/JeromeFitz/instafeed-lite",
   "keywords": [
