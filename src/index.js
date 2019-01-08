@@ -1,4 +1,3 @@
-import '@babel/polyfill'
 import invariant from 'invariant'
 
 import buildUrl from './modules/buildUrl'

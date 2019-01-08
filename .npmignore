@@ -1,5 +1,5 @@
 !dist/**
-!node_modules/**
+node_modules/**
 src/**
 .editorconfig
 .eslintignore
@@ -9,3 +9,5 @@ src/**
 .prettierrc
 .travis.yml
 babel.config.js
+package-lock.json
+yarn.lock
