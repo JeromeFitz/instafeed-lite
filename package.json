@@ -31,7 +31,7 @@
     "precommit": "lint-staged"
   },
   "dependencies": {
-    "@babel/runtime": "^7.2.0",
+    "@babel/runtime": "^7.10.0",
     "invariant": "^2.2.4",
     "isomorphic-unfetch": "^3.0.0"
   },
